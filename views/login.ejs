@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="resources/css/login.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <div class="login-form">
+        <h1>Formulario de acceso</h1>
+        <form action="auth" method="post">
+            <input type="text" name="user" id="user" placeholder="Nombre de usuario..." required>
+            <input type="password" name="pass" id="pass" placeholder="Contraseña..." required>
+            <div style="display: inline;">
+                <input type="submit" class="btn-login" value="Login">
+            </div>
+            <a href="/" class="btn-cancel">Cancelar</a>
+        </form>
+    </div> 
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>
+            }).then(()=>{
+                window.location='/<%= ruta %>'
+            })
+        </script>
+    
+    <% } %>
+
+</body>
+</html>

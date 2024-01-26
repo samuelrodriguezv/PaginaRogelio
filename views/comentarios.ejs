@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxecto</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+
+    <header class="fixed-top">
+    <div class="d-flex justify-content-between pb-2">
+        <h1 class="ms-5 mt-4">Rogelio Santos Queiruga</h1>
+        
+        <div id="usuarios" class="mt-4 me-5">
+            <% if (login) { %>
+                Usuario: <%= name %>
+                <a href="logout" class="btn btn-warning ms-3">Cerrar sesión</a>
+
+            <% } else { %>
+            <a href="register" id="btnRegister" class="h6 mt-2 btn text-end me-3">Registrarse</a>
+            <a href="login" id="btnLogin" class="h6 mt-2 btn text-end">Acceder</a>
+            <% }%>
+
+        </div>
+    </div>
+
+    <div id="navbar" class="d-flex">
+        <a href="/" class="btn align-self-center w-100 p-3 rounded-0">Inicio</a>
+        <a href="info" class="btn align-self-center w-100 p-3 rounded-0">Información</a>
+        <a href="imaxes" class="btn align-self-center w-100 p-3 rounded-0">Imaxes</a>
+        <a id="actual" href="comentarios" class="btn w-100 p-3  rounded-0">Comentarios</a>
+        <a href="publicacions" class="btn align-self-center w-100 p-3 rounded-0">Publicacións</a>
+    </div>
+
+    </header>
+
+    <article>
+    <div id="centro" class="d-flex justify-content-between m-3 fixed-left">
+        <aside class="position-fixed">
+            <div id="imaxes" class="border publi1"></div>
+        </aside>
+        <div id="espacio"></div>
+
+        <section class="w-75 text-left bottom-scroll mb-5 p-5">
+            <h1 class="mb-5 p-3">Comentarios</h1>
+            <form action="comentario" method="post">
+                <p class="h4">Escribe un comentario dando a túa opinión: </p>
+                <textarea class="w-100" name="text" rows="3" required></textarea>
+                <input type="submit" class="btn bg-warning" value="Enviar">
+            </form>
+            <br><br>
+            <div class="row mb-5">
+                <% for (var i = 0; i < numComentarios; i++) {%>
+                <div id="comentario" class="col-12 p-3 border-bottom border-info">
+                    <% if(usuario == 'admin') {%>
+                        <form action="borrar" method="post">
+                            <input type="text" name="idCom" value="<%= idComentario[i] %>" hidden>
+                            <input title="Eliminar comentario" id="imaxes" type="submit" class="btn btnBorrar m-3" value="">
+                        </form>
+                    <%}%>
+                    <p><%= texto[i] %> </p>
+                    <p><strong>Autor:</strong> <%= autor[i] %></p>
+                </div>
+                <% } %>
+            </div>
+            <div class="d-flex justify-content-around">
+                <a id="link1" target="_blank" href="https://www.facebook.com/olabradorqueescribedendeomar/photos">
+                <div id="imaxes" class="p-3 icono1"></div>
+                </a>
+                <a id="link2" target="_blank" href="https://twitter.com/QueirugaRogelio">
+                <div id="imaxes" class="p-3 icono2"></div>
+                </a>
+                <a id="link3" target="_blank" href="https://www.instagram.com/rogeliosantosqueiruga/?hl=es">
+                <div id="imaxes" class="p-3 icono3"></div>
+                </a>
+                <a id="link4" target="_blank" href="https://www.youtube.com/@rogeliosantosqueiruga7152/videos">
+                <div id="imaxes" class="p-3 icono4"></div>
+                </a>
+            </div>
+        </section>
+
+        <div id="espacio" class="derecha"></div>
+        <aside class="aside">
+            <div id="imaxes" class="border publi2"></div>
+        </aside>
+    </div>
+
+    </article>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <% if(typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>
+            }).then(()=>{
+                window.location='/<%= ruta %>'
+            })
+        </script>
+    
+    <% } %>
+
+</body>
+</html>

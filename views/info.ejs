@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxecto</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+
+    <header class="fixed-top">
+    <div class="d-flex justify-content-between pb-2">
+        <h1 class="ms-5 mt-4">Rogelio Santos Queiruga</h1>
+        
+        <div id="usuarios" class="mt-4 me-5">
+            <% if (login) { %>
+                Usuario: <%= name %>
+                <a href="logout" class="btn btn-warning ms-3">Cerrar sesión</a>
+
+            <% } else { %>
+            <a href="register" id="btnRegister" class="h6 mt-2 btn text-end me-3">Registrarse</a>
+            <a href="login" id="btnLogin" class="h6 mt-2 btn text-end">Acceder</a>
+            <% }%>
+
+        </div>
+    </div>
+
+    <div id="navbar" class="d-flex">
+        <a href="/" class="btn align-self-center w-100 p-3 rounded-0">Inicio</a>
+        <a id="actual"class="btn w-100 p-3 rounded-0">Información</a>
+        <a href="imaxes" class="btn align-self-center w-100 p-3 rounded-0">Imaxes</a>
+        <% if (login) { %>
+        <a href="comentarios" class="btn align-self-center w-100 p-3  rounded-0">Comentarios</a>
+        <a href="publicacions" class="btn align-self-center w-100 p-3 rounded-0">Publicacións</a>
+        <% }%>
+    </div>
+
+    </header>
+
+    <article>
+    <div id="centro" class="d-flex justify-content-between m-3 fixed-left">
+        <aside class="position-fixed">
+            <div id="imaxes" class="border publi1"></div>
+        </aside>
+        <div id="espacio"></div>
+
+        <section class="w-75 bottom-scroll mb-5 container p-5">
+            <h1 class="mb-5 p-3">Información sobre Rogelio</h1>
+            <div class="row m-2 mb-3 p-3">
+                <div class="col-8 p-5">
+                    <p class="h5 lh-base mb-4 col align-self-start">
+                        <span class="h2">E</span>ste profesional do mar de Queiruga nacido no 1977 fala sobre as mellores
+                        especies das augas galegas para consumir en cada época do ano, de exemplares foráneos
+                        ou pouco habituais que poden chegar aos aparellos e, ao mesmo tempo, realixa unha labor
+                        de sensibilización sobre a necesidade de coidar o medio ambiente. </p>
+                </div>
+                <div id="infoImagen1" class="col-4"></div>
+            </div>
+            <div class="row m-2 mb-3 p-3">
+                <div id="infoImagen2" class="col-4">
+                </div>
+                <div class="col-8 p-5">
+                    <p class="h5 lh-base">
+                        <span class="h2">A</span>os seus catorce anos, Rogelio deixou os estudos e comezou a axudar á súa nai na casa.
+                        A pesar de que o seu interés polo traballo físico e manual levouno a iniciarse na agricultura
+                        e a vida de labrador, a forte atración mariña da familia puido con el e con 18 anos conseguiu
+                        o certificado necesario para botarse á mar xunto a seu irmán.
+                    </p>
+                </div>
+            </div>
+            <div class="row m-2 mb-3 p-3">
+                <div class="col-8 mb-3 p-5">
+                    <p class="h5 lh-base">
+                        <span class="h2">X</span>a dende esa idade, a mentalidade autoconsciente de coidar e 
+                        respectar o mar era a prioridade número uno para Rogelio: “A forma de ser e de pensar 
+                        que comparto hoxe en redes é froito do que eu vivía na miña contorna. Fun educado 
+                        sempre con conciencia sobre respectar e coidar o mar”, lembra. Xa con 25 anos 
+                        conseguiu o título de patrón de pesca, que comparte co seu irmán ata hoxe.
+                    </p>
+                </div>
+                <div id="infoImagen3" class="col-4">
+                </div>
+            </div>
+            <div class="row m-2 mb-3 p-3">
+                <div id="infoImagen4" class="col-4">
+
+                </div>
+                <div class="col-8 p-5">
+                    <p class="h5 lh-base mb-4">
+                        <span class="h2">A</span>índa que os coñecementos informáticos de Rogelio naquel 
+                        entón eran limitados, comezou a escribir sobre diversos temas no seu perfil persoal 
+                        de Facebook. Con todo, Rogelio comezou a darse conta de que as súas mensaxes sobre o 
+                        mar e o oficio de mariñeiro eran os que máis expectación e respostas xeraban. Por iso 
+                        decidiu crear unha páxina específica sobre cuestións relacionadas co mar: Ou labrador 
+                        que escribe dende ou mar.
+                    </p>
+                </div>
+            </div>
+            <div class="row m-2 mb-3 p-5">
+                <div class="col-8 p-3">
+                    <p class="h5 lh-base mb-4">
+                        <span class="h2">A</span>s súas reflexións e as súas accións, acompañadas de fotografías e vídeos, 
+                        foron xerando un gran número de seguidores, e saltou ás outras redes sociais. Actualmente conta 
+                        con máis de 24.000 seguidores en Facebook, 14.000 en Twitter e 16.000 en Instagram, que se di pronto.
+                    </p>
+                </div>
+                <div id="infoImagen5" class="col-4">
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <a id="link1" target="_blank" href="https://www.facebook.com/olabradorqueescribedendeomar/photos">
+                <div id="imaxes" class="p-3 icono1"></div>
+                </a>
+                <a id="link2" target="_blank" href="https://twitter.com/QueirugaRogelio">
+                <div id="imaxes" class="p-3 icono2"></div>
+                </a>
+                <a id="link3" target="_blank" href="https://www.instagram.com/rogeliosantosqueiruga/?hl=es">
+                <div id="imaxes" class="p-3 icono3"></div>
+                </a>
+                <a id="link4" target="_blank" href="https://www.youtube.com/@rogeliosantosqueiruga7152/videos">
+                <div id="imaxes" class="p-3 icono4"></div>
+                </a>
+            </div>
+        </section>
+
+        <div id="espacio" class="derecha"></div>
+        <aside class="aside">
+            <div id="imaxes" class="border publi2"></div>
+        </aside>
+    </div>
+
+    </article>
+
+</body>
+</html>

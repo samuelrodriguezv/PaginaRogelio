@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxecto</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+
+    <header class="fixed-top">
+    <div class="d-flex justify-content-between pb-2">
+        <h1 class="ms-5 mt-4">Rogelio Santos Queiruga</h1>
+        
+        <div id="usuarios" class="mt-4 me-5">
+            <% if (login) { %>
+                Usuario: <%= name %>
+                <a href="logout" class="btn btn-warning ms-3">Cerrar sesión</a>
+
+            <% } else { %>
+            <a href="register" id="btnRegister" class="h6 mt-2 btn text-end me-3">Registrarse</a>
+            <a href="login" id="btnLogin" class="h6 mt-2 btn text-end">Acceder</a>
+            <% }%>
+
+        </div>
+    </div>
+
+    <div id="navbar" class="d-flex">
+        <a href="/" class="btn align-self-center w-100 p-3 rounded-0">Inicio</a>
+        <a href="info" class="btn align-self-center w-100 p-3 rounded-0">Información</a>
+        <a id="actual" href="imaxes" class="btn w-100 p-3 rounded-0">Imaxes</a>
+        <% if (login) { %>
+        <a href="comentarios" class="btn align-self-center w-100 p-3  rounded-0">Comentarios</a>
+        <a href="publicacions" class="btn align-self-center w-100 p-3 rounded-0">Publicacións</a>
+        <% }%>
+    </div>
+
+    </header>
+
+    <article>
+    <div id="centro" class="d-flex justify-content-between m-3 fixed-left">
+        <aside class="position-fixed">
+            <div id="imaxes" class="border publi1"></div>
+        </aside>
+        <div id="espacio"></div>
+
+        <section id="seccionImaxes" class="w-75 text-left bottom-scroll mb-5 container p-5">
+            <h1 class="mb-5 p-3">Imaxes</h1>
+            <div id="img" class="p-3 m-3">
+            <div id="imaxes" class="imaxe1 mb-2"></div>
+            <p>Será que non teñen alta taxa de supervivencia si se liberan que non esté prohibido pescalas con ova ? 
+                O que si, a súa pesca está prohibidísima cando escasean, o que é unha forma contundente de protexela, tanto ou máis que o das ovas. Cada especie é distinta, as normas tamèn.
+            </p><p>2 Setembro 2022</p>
+            </div>
+            <div id="img" class="p-3 m-3">
+            <div id="imaxes" class="imaxe2 mb-2"></div>
+            <p>Os mariñeiros do 2022 podemos ser saqueadores do océano ou convertirnos en protectores do océano. 
+                O mar é máis que merluzas. Para que estas abunden, ten que haber de todo o demais, que non vai á lonxa, e neso, a función das algas é fundamental. Protexer é tamén dar a conocer.</p>
+                <p>3 Setembro 2022</p>
+            </div>
+            <div id="img" class="p-3 m-3">
+            <div id="imaxes" class="imaxe3 mb-2"></div>
+            <p>Algunhas das pescas de hoxe :</p>
+            <p>16 Setembro 2022</p>
+            </div>
+            <div id="img" class="p-3 m-3">
+            <div id="imaxes" class="imaxe4 mb-2"></div>
+            <p>O Sábado 15 de outubro 2022 ás 19.00 horas portarei con orgullo ese cuadro dentro da actuación O CANTO DA SUBASTA. 
+                Lugar: Praza de España, Porto do Son</p>
+                <p>13 Outubro 2022</p>
+            </div>
+            <div id="img" class="p-3 m-3">
+            <div id="imaxes" class="imaxe5 mb-2"></div>
+            <p>O venres este mariñeiro dou unha charla para os alumnos destos tres centros educativos de CEE ( A Coruña ) :  Manuela Rial, Agra de Raíces e o Fernando Blanco. Sentín moito ter que marchar, cas mans de máis de 30 rapaces levantadas querendo facer máis preguntas, despois de 2 h.</p>
+            <p>22 Outubro 2022</p>
+            </div>
+            <div id="img" class="p-3 m-3">
+            <div id="imaxes" class="imaxe6 mb-2"></div>
+            <p>A partir de mañán abre a veda da centola para as provincias de A Coruña e Pontevedra. A partir do 28 tamén da de Lugo. 
+                Levar para terra centolas vacías a sabendas, é decir, " faroles ", é legal, pero aguantan menos vivas e disgustan ao consumidor. É un destrago.
+                Boa campaña !!!</p>
+            <p>6 Novembro 2022</p>
+            </div>
+            <div id="img" class="p-3 m-3">
+            <div id="imaxes" class="imaxe7 mb-2"></div>
+            <p>Preséntovos á Palometa blanca ou Pámpano blanco, aínda que ten outros moitos nomes. 
+                A primeira foto é de googel, a segunda dun pescador de cana no porto de Muros ( A Coruña ). Disque é típica dende o Cantábrico ata Angola, e por todo o Mediterráneo. Eu é a primeira que vexo</p>
+            <p>10 Novembro 2022</p>
+            </div>
+            <div class="d-flex justify-content-around">
+                <a id="link1" target="_blank" href="https://www.facebook.com/olabradorqueescribedendeomar/photos">
+                <div id="imaxes" class="p-3 icono1"></div>
+                </a>
+                <a id="link2" target="_blank" href="https://twitter.com/QueirugaRogelio">
+                <div id="imaxes" class="p-3 icono2"></div>
+                </a>
+                <a id="link3" target="_blank" href="https://www.instagram.com/rogeliosantosqueiruga/?hl=es">
+                <div id="imaxes" class="p-3 icono3"></div>
+                </a>
+                <a id="link4" target="_blank" href="https://www.youtube.com/@rogeliosantosqueiruga7152/videos">
+                <div id="imaxes" class="p-3 icono4"></div>
+                </a>
+            </div>
+        </section>
+
+        <div id="espacio" class="derecha"></div>
+        <aside class="aside">
+            <div id="imaxes" class="border publi2"></div>
+        </aside>
+    </div>
+
+    </article>
+
+</body>
+</html>

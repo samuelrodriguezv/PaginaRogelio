@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxecto</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+
+    <header class="fixed-top">
+    <div class="d-flex justify-content-between pb-2">
+        <h1 class="ms-5 mt-4">Rogelio Santos Queiruga</h1>
+        
+        <div id="usuarios" class="mt-4 me-5">
+            <% if (login) { %>
+                Usuario: <%= name %>
+                <a href="logout" class="btn btn-warning ms-3">Cerrar sesión</a>
+
+            <% } else { %>
+            <a href="register" id="btnRegister" class="h6 mt-2 btn text-end me-3">Registrarse</a>
+            <a href="login" id="btnLogin" class="h6 mt-2 btn text-end">Acceder</a>
+            <% }%>
+
+        </div>
+    </div>
+
+    <div id="navbar" class="d-flex justify-content-around">
+        <a id="actual" class="btn w-100 p-3 rounded-0">Inicio</a>
+        <a href="info" class="btn align-self-center w-100 p-3 rounded-0">Información</a>
+        <a href="imaxes" class="btn align-self-center w-100 p-3 rounded-0">Imaxes</a>
+        <% if (login) { %>
+        <a href="comentarios" class="btn align-self-center w-100 p-3 rounded-0">Comentarios</a>
+        <a href="publicacions" class="btn align-self-center w-100 p-3 rounded-0">Publicacións</a>
+        <% }%>
+    </div>
+
+    </header>
+
+    <article>
+    <div id="centro" class="d-flex justify-content-between m-3">
+        <aside class="position-fixed">
+            <div id="imaxes" class="border publi1"></div>
+        </aside>
+        <div id="espacio"></div>
+
+        <section class="w-75 text-left bottom-scroll mb-5 container p-5">
+            <h1 class="mb-5 p-3">Benvido á páxina de Rogelio Santos Queiruga</h1>
+            <div class="row mb-5">
+                <div class="col-7 p-3">
+                    <p class="h4 p-3 lh-base mb-4 text-start">
+                    Rogelio é un coñecido influencer galego que se dedica a subir imaxes e vídeos para concienciar
+                    á xente sobre as maravillas do mundo marítimo.<br>Neste pequeno rincón poderás ver algunhas das
+                    súas publicacións e contaxiarte un pouco do coñecemento que comparte co mundo.<br>
+                    Tes dende fotografías que adoita facer cando sae a pescar ata vídeos nos que
+                    explica datos curiosos sobre as diferentes especies que se atopa.<br>
+                    Se queres ver o contido que sube ao momento, rexístrate e accede como usuario.<br>
+                    </p>
+                </div>
+                <div id="imagenR" class="col-5">
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <a id="link1" target="_blank" href="https://www.facebook.com/olabradorqueescribedendeomar/photos">
+                <div id="imaxes" class="p-3 icono1"></div>
+                </a>
+                <a id="link2" target="_blank" href="https://twitter.com/QueirugaRogelio">
+                <div id="imaxes" class="p-3 icono2"></div>
+                </a>
+                <a id="link3" target="_blank" href="https://www.instagram.com/rogeliosantosqueiruga/?hl=es">
+                <div id="imaxes" class="p-3 icono3"></div>
+                </a>
+                <a id="link4" target="_blank" href="https://www.youtube.com/@rogeliosantosqueiruga7152/videos">
+                <div id="imaxes" class="p-3 icono4"></div>
+                </a>
+            </div>
+        </section>
+
+        <div id="espacio" class="derecha"></div>
+        <aside class="aside">
+            <div id="imaxes" class="border publi2"></div>
+        </aside>
+    </div>
+
+    </article>
+
+</body>
+</html>
